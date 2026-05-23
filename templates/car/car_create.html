@@ -3,7 +3,6 @@
 <form action="" method="POST">
     {% csrf_token %}
 
-    {{ form.errors }}
     <div>
         <label for="{{ form.brand.id_for_label }}"> MARCA </label> <br>
         {{ form.brand }}
