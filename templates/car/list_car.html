@@ -1,0 +1,12 @@
+<!-- Show all Car -->
+{% for car in cars %}
+    <article>
+        <img>
+        <h3> {{ car.brand }} {{ car.model }} </h3>
+        <p> {{ car.preview }} </p>
+        <p> Stock: {{ car.stock }} </p>
+        <p> Estado: {{ car.availability }} </p>
+        <p> Precio: {{ car.price }} </p>
+        <button> <a href="{% url 'car:car_detail' car.pk %}"> VER DETALLES </a> </button>
+    </article>
+{% endfor %}

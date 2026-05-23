@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <title> DASHBOARD AUTOS PAGANI </title>
+</head>
+<body>
+    <header>
+        <h1> PAGANI </h1>
+    </header>
+    <br>
+
+    <!-- Show car availiability and Filter -->
+    <!-- Here implement JavaScript features-->
+
+    <!-- Button to Create car -->
+    <button> <a href="{% url 'car:create_car' %}"> NUEVO AUTO A LA VENTA </a> </button>
+    <br>
+
+    <!-- Display all car availability in the Shop -->
+    <section>
+        {% include 'car/list_car.html' %}
+    </section>
+</body>
+</html>

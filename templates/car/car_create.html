@@ -1,0 +1,80 @@
+<h3> NUEVO AUTO A LA VENTA </h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.errors }}
+    <div>
+        <label for="{{ form.brand.id_for_label }}"> MARCA </label> <br>
+        {{ form.brand }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.model.id_for_label }}"> MODELO </label> <br>
+        {{ form.model }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.preview.id_for_label }}"> PREVIEW </label> <br>
+        {{ form.preview }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.description.id_for_label }}"> DESCRIPCION </label> <br>
+        {{ form.description }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.external_color.id_for_label }}"> COLOR EXTERIOR </label> <br>
+        {{ form.external_color }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.internal_color.id_for_label }}"> COLOR INTERIOR </label> <br>
+        {{ form.internal_color }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.dimmenssion.id_for_label }}"> DIMENSION </label> <br>
+        {{ form.dimmenssion }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.weight.id_for_label }}"> PESO </label> <br>
+        {{ form.weight }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.consumtion.id_for_label }}"> CONSUMO </label> <br>
+        {{ form.consumtion }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.stock.id_for_label }}"> STOCK </label> <br>
+        {{ form.stock }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.availability.id_for_label }}"> DISPONIBILIDAD </label> <br>
+        {{ form.availability }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.price.id_for_label }}"> PRECIO </label> <br>
+        {{ form.price }}
+    </div>
+    <br>
+
+    <button type="submit"> CREAR AUTO A LA VENTA </button>
+</form>

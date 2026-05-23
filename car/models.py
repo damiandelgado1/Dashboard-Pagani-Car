@@ -4,9 +4,10 @@ from django.db import models
 class Car(models.Model):
     brand = models.CharField(max_length=20, null=True, verbose_name="Marca del Auto")
     model = models.CharField(max_length=20, verbose_name="Modelo")
-    motor = models.TextField(verbose_name="Motor")
+    preview = models.TextField(verbose_name="Previsualizacion Auto")
+    description = models.TextField(verbose_name="Descripcion")
     dimmenssion = models.IntegerField(verbose_name="Dimensiones del Auto")
-    weight = models.DecimalField(max_digits=6, decimal_places=2, null=True, verbose_name="Marca del Auto")
+    weight = models.DecimalField(max_digits=6, decimal_places=2, null=True, verbose_name="Peso")
     consumtion = models.IntegerField(verbose_name="Litros de Consumo")
     external_color = models.CharField(max_length=20, null=True, verbose_name="Color exterior")
     internal_color = models.CharField(max_length=20, null=True, verbose_name="Color interior")

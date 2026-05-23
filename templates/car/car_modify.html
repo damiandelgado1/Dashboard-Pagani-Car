@@ -1,0 +1,37 @@
+<h3> MODIFICAR AUTO {{ car.brand }} {{ car.model }} </h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <div>
+        <label for="{{ form.external_color.id_for_label }}"> COLOR EXTERNO </label> <br>
+        {{ form.external_color }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.internal_color.id_for_label }}"> COLOR INTERNO </label> <br>
+        {{ form.internal_color }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.stock.id_for_label }}"> STOCK </label> <br>
+        {{ form.stock }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.availability.id_for_label }}"> DISPONIBILIDAD </label> <br>
+        {{ form.availability }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.price.id_for_label }}"> PRECIO </label> <br>
+        {{ form.price }}
+    </div>
+    <br>
+
+    <button type="submit"> MODIFICAR AUTO </button>
+</form>

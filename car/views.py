@@ -7,14 +7,14 @@ from .models import Car
 # Display all Car availability
 class ListCar(ListView):
     model = Car
-    template_name = ""
+    template_name = "car/list_car.html"
     context_object_name = "cars"
 
 
 # Show all detail by a Car
 class DetailCar(DetailView):
     model = Car
-    template_name = ""
+    template_name = "car/detail_car.html"
     context_object_name = "car"
 
 
@@ -24,7 +24,8 @@ class CreateCar(CreateView):
     fields = [
         "brand",
         "model",
-        "motor",
+        "preview",
+        "description",
         "dimmenssion",
         "weight",
         "consumtion",
@@ -34,8 +35,8 @@ class CreateCar(CreateView):
         "availability",
         "price"
     ]
-    template_name = ""
-    success_url = reverse_lazy("")
+    template_name = "car/car_create.html"
+    success_url = reverse_lazy("dashboard")
 
 
 # Modify stated of the Car
@@ -48,12 +49,11 @@ class ModifyCar(UpdateView):
         "availability",
         "price",
     ]
-    template_name = ""
-    success_url = reverse_lazy("")
+    template_name = "car/car_modify.html"
+    success_url = reverse_lazy("dashboard")
 
 
-# Delete Car by Shop
 class DeleteCar(DeleteView):
-    model = Car
-    template_name = ""
-    success_url = reverse_lazy("")
+	model = Car
+	template_name = "car/car_delete.html"
+	success_url = reverse_lazy("dashboard")

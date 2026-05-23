@@ -1,0 +1,40 @@
+<h3> {{ car.brand }} {{ car.model }} </h3>
+<p> {{ car.description }} </p>
+<img>
+<br>
+<button> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
+<button> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
+<h3> ESPECIFICACIONES </h3>
+<table>
+    <td> Marca </td>
+    <td> {{ car.brand }} </td>
+    <tr>
+    <td> Modelo </td>
+    <td> {{ car.model }} </td>
+    <tr>
+    <td> Color Exterior </td>
+    <td> {{ car.external_color }} </td>
+    <tr>
+    <td> Color Interior </td>
+    <td> {{ car.internal_color }} </td>
+    <tr>
+    <td> Motor </td>
+    <td> {{ car.motor }} </td>
+    <tr>
+    <td> Dimension </td>
+    <td> {{ car.dimmenssion }} </td>
+    <tr>
+    <td> Consumo </td>
+    <td> {{ car.consumtion }} </td>
+    <tr>
+    <td> Stock </td>
+    <td> {{ car.stock }} </td>
+    <tr>
+    <td> Disponibilidad </td>
+    <td> {{ car.availability }} </td>
+    <tr>
+
+    <p> Precio <br>
+        {{ car.price }}
+    </p>
+</table>
