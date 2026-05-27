@@ -1,40 +1,61 @@
-<h3> {{ car.brand }} {{ car.model }} </h3>
-<p> {{ car.description }} </p>
-<img>
-<br>
-<button> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
-<button> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
-<h3> ESPECIFICACIONES </h3>
-<table>
-    <td> Marca </td>
-    <td> {{ car.brand }} </td>
-    <tr>
-    <td> Modelo </td>
-    <td> {{ car.model }} </td>
-    <tr>
-    <td> Color Exterior </td>
-    <td> {{ car.external_color }} </td>
-    <tr>
-    <td> Color Interior </td>
-    <td> {{ car.internal_color }} </td>
-    <tr>
-    <td> Motor </td>
-    <td> {{ car.motor }} </td>
-    <tr>
-    <td> Dimension </td>
-    <td> {{ car.dimmenssion }} </td>
-    <tr>
-    <td> Consumo </td>
-    <td> {{ car.consumtion }} </td>
-    <tr>
-    <td> Stock </td>
-    <td> {{ car.stock }} </td>
-    <tr>
-    <td> Disponibilidad </td>
-    <td> {{ car.availability }} </td>
-    <tr>
-</table>
+{% load static %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 
-<p> Precio <br>
-    {{ car.price }}
-</p>
+<article>
+    <h3> {{ car.brand }} {{ car.model }} </h3>
+    <p> {{ car.description }} </p>
+    <img>
+    <br>
+    <button> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
+    <button> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
+    <h3> ESPECIFICACIONES </h3>
+    <table>
+        <tr>
+            <td> Marca </td>
+            <td> {{ car.brand }} </td>
+        </tr>
+        <tr>
+            <td> Modelo </td>
+            <td> {{ car.model }} </td>
+        </tr>
+        <tr>
+            <td> Color Exterior </td>
+            <td> {{ car.external_color }} </td>
+        </tr>
+        <tr>
+            <td> Color Interior </td>
+            <td> {{ car.internal_color }} </td>
+        </tr>
+        <tr>
+            <td> Motor </td>
+            <td> {{ car.motor }} </td>
+        </tr>
+        <tr>
+            <td> Dimension </td>
+            <td> {{ car.dimmenssion }} </td>
+        </tr>
+        <tr>
+            <td> Consumo </td>
+            <td> {{ car.consumtion }} </td>
+        </tr>
+        <tr>
+            <td> Stock </td>
+            <td> {{ car.stock }} </td>
+        </tr>
+        <tr>
+            <td> Disponibilidad </td>
+            <td> {{ car.availability }} </td>
+        </tr>
+    </table>
+
+    <p> Precio <br>
+        {{ car.price }}
+    </p>
+</article>
+
+<nav>
+    <a href="{% url 'dashboard' %}" class="return-dashboard"> VOLVER AL DASHBOARD</a>
+</nav>
