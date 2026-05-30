@@ -2,16 +2,30 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/estilos.css' %}">
 
 <h3> NUEVO AUTO A LA VENTA </h3>
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
+    {{ form.errors }}
 
+    <h3> INFORMACION GENERAL </h3>
     <div>
         <label for="{{ form.brand.id_for_label }}"> MARCA </label> <br>
         {{ form.brand }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.photo.id_for_label }}"> FOTO DEL AUTO </label> <br>
+        {{ form.photo }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.photo_interior.id_for_label }}"> FOTOS DEL INTERIOR </label> <br>
+        {{ form.photo_interior }}
     </div>
     <br>
 
@@ -34,6 +48,13 @@
     <br>
 
     <div>
+        <label for="{{ form.price.id_for_label }}"> PRECIO </label> <br>
+        {{ form.price }}
+    </div>
+    <br>
+
+    <h3> DISEÑO </h3>
+    <div>
         <label for="{{ form.external_color.id_for_label }}"> COLOR EXTERIOR </label> <br>
         {{ form.external_color }}
     </div>
@@ -46,23 +67,26 @@
     <br>
 
     <div>
-        <label for="{{ form.dimmenssion.id_for_label }}"> DIMENSION </label> <br>
-        {{ form.dimmenssion }}
+        <label for="{{ form.tires.id_for_label }}"> LLANTAS </label> <br>
+        {{ form.tires }}
+    </div>
+    <br>
+
+    <h3> RENDIMIENTO </h3>
+
+    <div>
+        <label for="{{ form.max_speed.id_for_label }}"> VELOCIDAD MAX. </label> <br>
+        {{ form.max_speed }}
     </div>
     <br>
 
     <div>
-        <label for="{{ form.weight.id_for_label }}"> PESO </label> <br>
-        {{ form.weight }}
+        <label for="{{ form.tire.id_for_label }}"> NEUMATICOS </label> <br>
+        {{ form.tire }}
     </div>
     <br>
 
-    <div>
-        <label for="{{ form.consumtion.id_for_label }}"> CONSUMO </label> <br>
-        {{ form.consumtion }}
-    </div>
-    <br>
-
+    <h3> INVENTARIO </h3>
     <div>
         <label for="{{ form.stock.id_for_label }}"> STOCK </label> <br>
         {{ form.stock }}
@@ -79,7 +103,6 @@
         <label for="{{ form.price.id_for_label }}"> PRECIO </label> <br>
         {{ form.price }}
     </div>
-    <br>
 
-    <button type="submit"> CREAR AUTO A LA VENTA </button>
+    <button type="submit" class="button"> CREAR AUTO A LA VENTA </button>
 </form>

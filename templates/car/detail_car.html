@@ -2,15 +2,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/estilos.css' %}">
 
 <article>
     <h3> {{ car.brand }} {{ car.model }} </h3>
+    <img src="{{ car.photo.url }}" width="300">
     <p> {{ car.description }} </p>
-    <img>
     <br>
-    <button> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
-    <button> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
+    <img src="{{ car.photo_interior.url }}" width="300">
+    <br>
+    <button class="button"> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
+    <button class="button"> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
     <h3> ESPECIFICACIONES </h3>
     <table>
         <tr>

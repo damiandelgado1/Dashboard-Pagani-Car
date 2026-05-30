@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/estilos.css' %}">
     <title> DASHBOARD AUTOS PAGANI </title>
 </head>
 <body>
@@ -20,7 +20,7 @@
     <!-- Here implement JavaScript features-->
 
     <!-- Button to Create car -->
-    <button> <a href="{% url 'car:create_car' %}"> NUEVO AUTO A LA VENTA </a> </button>
+    <button class="button"> <a href="{% url 'car:create_car' %}"> NUEVO AUTO A LA VENTA </a> </button>
     <br>
 
     <!-- Display all car availability in the Shop -->
