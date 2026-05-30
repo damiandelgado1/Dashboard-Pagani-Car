@@ -7,6 +7,6 @@
         <p> Stock: {{ car.stock }} </p>
         <p> Estado: {{ car.availability }} </p>
         <p> Precio: {{ car.price }} </p>
-        <button class="button"> <a href="{% url 'car:car_detail' car.pk %}"> VER DETALLES </a> </button>
+        <button> <a href="{% url 'car:car_detail' car.pk %}"> VER DETALLES </a> </button>
     </article>
 {% endfor %}

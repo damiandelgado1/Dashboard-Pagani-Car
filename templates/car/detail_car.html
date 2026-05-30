@@ -11,8 +11,8 @@
     <br>
     <img src="{{ car.photo_interior.url }}" width="300">
     <br>
-    <button class="button"> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
-    <button class="button"> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
+    <button> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
+    <button> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
     <h3> ESPECIFICACIONES </h3>
     <table>
         <tr>
