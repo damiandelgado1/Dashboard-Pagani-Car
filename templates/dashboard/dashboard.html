@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1> PAGANI </h1>
+        <h1 class="name-car"> PAGANI </h1>
     </header>
     <br>
 
@@ -20,7 +20,9 @@
     <!-- Here implement JavaScript features-->
 
     <!-- Button to Create car -->
-    <button> <a href="{% url 'car:create_car' %}"> NUEVO AUTO A LA VENTA </a> </button>
+    <nav>
+        <a href="{% url 'car:create_car' %}" class="create"> NUEVO AUTO A LA VENTA </a>
+    </nav>
     <br>
 
     <!-- Display all car availability in the Shop -->

@@ -7,38 +7,44 @@ body {
     text-align: center;
 }
 
-button {
+.name-car {
+    color: white;
+}
+
+img {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.return {
+    color: white;
+    padding: 40px;
+    position: relative;
+    top: 40px;
+    text-decoration: none;
+}
+
+.create {
     background-color: black;
     border: none;
     color: white;
     font-family: Josefin Sans;
+    font-size: 20px;
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 7px;
-}
-
-h3 {
-    background-color: #2B2B2B;
-}
-
-nav {
-    margin: 40px;
-}
-
-a {
-    color: white;
-    font-family: Josefin Sans;
+    padding: 10px;
     text-decoration: none;
 }
 
-a:hover {
+.create:hover {
     background-color: white;
     color: black;
 }
 
 .car-availability {
-    border: 2px solid #7E7E7E;
+    border: 2px solid #3A3A3A;
+    background-color: #212121;
     width: 360px;
     margin: 30px;
     margin-left: auto;
@@ -52,23 +58,56 @@ a:hover {
     text-align: center;
 }
 
-.car-availability:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+.detail-car {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    position: relative;
+    top: 180px;
+    left: 120px;
+    text-decoration: none;
 }
 
-article p:nth-of-type(1) {
-    width: 350px;
+.detail-car:hover {
+    background-color: white;
+    color: black;
+}
+
+.description-car {
+    font-size: 20px;
+    margin: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    width: 750px;
 }
 
-table {
+.manage-car {
+    background-color: #212121;
+    color: white;
+    margin: 10px;
+    position: relative;
+    top: 40px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.manage-car:hover {
+    background-color: white;
+    color: black;
+}
+
+.specification {
+    margin-top: 50px;
+}
+
+.specification-car {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px;
 }
 
-td {
+.car-specification {
     border-bottom: 2px solid white;
     padding: 6px;
 }

@@ -7,49 +7,53 @@
 <article>
     <h3> {{ car.brand }} {{ car.model }} </h3>
     <img src="{{ car.photo.url }}" width="300">
-    <p> {{ car.description }} </p>
+    <p class="description-car"> {{ car.description }} </p>
     <br>
     <img src="{{ car.photo_interior.url }}" width="300">
     <br>
-    <button> <a href="{% url 'car:modify_car' car.pk %}"> MODIFICAR AUTO </a> </button> <br>
-    <button> <a href="{% url 'car:delete_car' car.pk %}"> ELIMINAR AUTO </a> </button>
-    <h3> ESPECIFICACIONES </h3>
-    <table>
+
+    <a href="{% url 'car:modify_car' car.pk %}" class="manage-car"> MODIFICAR AUTO </a>
+    <a href="{% url 'car:delete_car' car.pk %}" class="manage-car"> ELIMINAR AUTO </a>
+    <br><br><br>
+
+    <h3 class="specification"> ESPECIFICACIONES </h3>
+
+    <table class="specification-car">
         <tr>
-            <td> Marca </td>
-            <td> {{ car.brand }} </td>
+            <td > Marca </td>
+            <td > {{ car.brand }} </td>
         </tr>
         <tr>
-            <td> Modelo </td>
-            <td> {{ car.model }} </td>
+            <td class="car-specification"> Modelo </td>
+            <td class="car-specification"> {{ car.model }} </td>
         </tr>
         <tr>
-            <td> Color Exterior </td>
-            <td> {{ car.external_color }} </td>
+            <td class="car-specification"> Color Exterior </td>
+            <td class="car-specification"> {{ car.external_color }} </td>
         </tr>
         <tr>
-            <td> Color Interior </td>
-            <td> {{ car.internal_color }} </td>
+            <td class="car-specification"> Color Interior </td>
+            <td class="car-specification"> {{ car.internal_color }} </td>
         </tr>
         <tr>
-            <td> Motor </td>
-            <td> {{ car.motor }} </td>
+            <td class="car-specification"> Motor </td>
+            <td class="car-specification"> {{ car.motor }} </td>
         </tr>
         <tr>
-            <td> Dimension </td>
-            <td> {{ car.dimmenssion }} </td>
+            <td class="car-specification"> Dimension </td>
+            <td class="car-specification"> {{ car.dimmenssion }} </td>
         </tr>
         <tr>
-            <td> Consumo </td>
-            <td> {{ car.consumtion }} </td>
+            <td class="car-specification"> Consumo </td>
+            <td class="car-specification"> {{ car.consumtion }} </td>
         </tr>
         <tr>
-            <td> Stock </td>
-            <td> {{ car.stock }} </td>
+            <td class="car-specification"> Stock </td>
+            <td class="car-specification"> {{ car.stock }} </td>
         </tr>
         <tr>
-            <td> Disponibilidad </td>
-            <td> {{ car.availability }} </td>
+            <td class="car-specification"> Disponibilidad </td>
+            <td class="car-specification"> {{ car.availability }} </td>
         </tr>
     </table>
 
@@ -59,5 +63,5 @@
 </article>
 
 <nav>
-    <a href="{% url 'dashboard' %}" class="return-dashboard"> VOLVER AL DASHBOARD</a>
+    <a href="{% url 'dashboard' %}" class="return"> VOLVER AL DASHBOARD</a>
 </nav>
