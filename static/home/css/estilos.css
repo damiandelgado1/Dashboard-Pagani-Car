@@ -156,3 +156,27 @@ img {
     background-color: white;
     color: black;
 }
+
+.modify-car {
+    margin: 50px;
+}
+
+.car-modify {
+    margin-left: 575px;
+    text-align: left;
+}
+
+.modify {
+    background-color: #000000;
+    border: 2px solid #212121;
+    color: white;
+    font-family: "Archivo Black";
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.modify:hover {
+    background-color: white;
+    color: black;
+}
