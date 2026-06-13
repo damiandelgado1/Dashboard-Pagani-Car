@@ -180,3 +180,18 @@ img {
     background-color: white;
     color: black;
 }
+
+.delete {
+    background-color: #000000;
+    border: 2px solid #212121;
+    color: white;
+    font-family: "Archivo Black";
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.delete:hover {
+    background-color: white;
+    color: black;
+}
