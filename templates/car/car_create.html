@@ -1,108 +1,138 @@
 {% load static %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'home/css/estilos.css' %}">
 
-<h3> NUEVO AUTO A LA VENTA </h3>
+<h3 class="create-car"> NUEVO AUTO A LA VENTA </h3>
 
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.errors }}
 
-    <h3> INFORMACION GENERAL </h3>
-    <div>
+    <h3 class="car-data"> INFORMACION GENERAL </h3>
+    <div class="car-create">
         <label for="{{ form.brand.id_for_label }}"> MARCA </label> <br>
-        {{ form.brand }}
+        <div class="input-car">
+            {{ form.brand }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.photo.id_for_label }}"> FOTO DEL AUTO </label> <br>
-        {{ form.photo }}
+        <div class="input-car">
+            {{ form.photo }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.photo_interior.id_for_label }}"> FOTOS DEL INTERIOR </label> <br>
-        {{ form.photo_interior }}
+        <div class="input-car">
+            {{ form.photo_interior }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.model.id_for_label }}"> MODELO </label> <br>
-        {{ form.model }}
+        <div class="input-car">
+            {{ form.model }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.preview.id_for_label }}"> PREVIEW </label> <br>
-        {{ form.preview }}
+        <div class="input-car">
+            {{ form.preview }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.description.id_for_label }}"> DESCRIPCION </label> <br>
-        {{ form.description }}
+        <div class="input-car">
+            {{ form.description }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.price.id_for_label }}"> PRECIO </label> <br>
-        {{ form.price }}
+        <div class="input-car">
+            {{ form.price }}
+        </div>
     </div>
     <br>
 
-    <h3> DISEÑO </h3>
-    <div>
+    <h3 class="car-data"> DISEÑO </h3>
+    <div class="car-create">
         <label for="{{ form.external_color.id_for_label }}"> COLOR EXTERIOR </label> <br>
-        {{ form.external_color }}
+        <div class="input-car">
+            {{ form.external_color }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.internal_color.id_for_label }}"> COLOR INTERIOR </label> <br>
-        {{ form.internal_color }}
+        <div class="input-car">
+            {{ form.internal_color }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.tires.id_for_label }}"> LLANTAS </label> <br>
-        {{ form.tires }}
+        <div class="input-car">
+            {{ form.tires }}
+        </div>
     </div>
     <br>
 
-    <h3> RENDIMIENTO </h3>
+    <h3 class="car-data"> RENDIMIENTO </h3>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.max_speed.id_for_label }}"> VELOCIDAD MAX. </label> <br>
-        {{ form.max_speed }}
+        <div class="input-car">
+            {{ form.max_speed }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.tire.id_for_label }}"> NEUMATICOS </label> <br>
-        {{ form.tire }}
+        <div class="input-car">
+            {{ form.tire }}
+        </div>
     </div>
     <br>
 
-    <h3> INVENTARIO </h3>
-    <div>
+    <h3 class="car-data"> INVENTARIO </h3>
+    <div class="car-create">
         <label for="{{ form.stock.id_for_label }}"> STOCK </label> <br>
-        {{ form.stock }}
+        <div class="input-car">
+            {{ form.stock }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.availability.id_for_label }}"> DISPONIBILIDAD </label> <br>
-        {{ form.availability }}
+        <div class="input-car">
+            {{ form.availability }}
+        </div>
     </div>
     <br>
 
-    <div>
+    <div class="car-create">
         <label for="{{ form.price.id_for_label }}"> PRECIO </label> <br>
-        {{ form.price }}
+        <div class="input-car">
+            {{ form.price }}
+        </div>
     </div>
 
-    <button type="submit"> CREAR AUTO A LA VENTA </button>
+    <button type="submit" class="car-new"> CREAR AUTO A LA VENTA </button>
 </form>

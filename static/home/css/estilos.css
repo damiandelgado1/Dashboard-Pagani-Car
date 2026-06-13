@@ -1,7 +1,7 @@
 body {
     background-color: #000000;
     color: white;
-    font-family: Josefin Sans;
+    font-family: "Archivo Black";
     font-size: 14px;
     margin-top: 70px;
     text-align: center;
@@ -9,6 +9,8 @@ body {
 
 .name-car {
     color: white;
+    letter-spacing: 20px;
+    margin: 70px;
 }
 
 img {
@@ -50,12 +52,27 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    height: 570px;
+    width: 720px;
+    height:190px;
     text-align: left;
 }
 
 .car-availability h3 {
-    text-align: center;
+    margin-left: 340px;
+    position: relative;
+    bottom: 210px;
+    text-align: left;
+}
+
+.car-availability > p {
+    margin-left: 340px;
+    position: relative;
+    bottom: 210px;
+}
+
+.car-availability > .photo-car {
+    position: relative;
+    right: 30px;
 }
 
 .detail-car {
@@ -63,8 +80,8 @@ img {
     color: white;
     padding: 8px;
     position: relative;
-    top: 180px;
-    left: 120px;
+    bottom: 230px;
+    left: 600px;
     text-decoration: none;
 }
 
@@ -74,7 +91,7 @@ img {
 }
 
 .description-car {
-    font-size: 20px;
+    font-size: 15px;
     margin: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -110,4 +127,32 @@ img {
 .car-specification {
     border-bottom: 2px solid white;
     padding: 6px;
+}
+
+.create-car {
+    margin: 70px;
+}
+
+.car-create {
+    margin-left: 500px;
+    text-align: left;
+}
+
+.car-data {
+    text-align: center;
+}
+
+.car-new {
+    background-color: #000000;
+    border: 2px solid #212121;
+    color: white;
+    font-family: "Archivo Black";
+    font-size: 16px;
+    margin: 50px;
+    padding: 10px;
+}
+
+.car-new:hover {
+    background-color: white;
+    color: black;
 }
