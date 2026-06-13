@@ -37,6 +37,11 @@ template                    # HTML show the car's, details every car and manage
 |-- manage.py
 ```
 
+### Technology
+
+- Python and Django -> For data model and business logic manage Car
+- HTML -> Create user interface in section List and Detail Car, Create, Update and Delete Car
+- CSS -> Style to improving user interface
+
 ### Additionally
-This project in development process, soon improving User Interface and create connection with MySQL o PostgreSQL
-DataBase, sqlite.db is temporall database
+This project in development process, soon add JavaScript functionallitys to interactive interface
